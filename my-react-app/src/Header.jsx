@@ -5,7 +5,7 @@ export default function Header() {
       <p className="name">Tom Ward</p>
       <small>
         made with love from Barbara{" "}
-        <img src="./public/tomandbarbara.JPG" alt="" />
+        <img src="./dist/tomandbarbara.JPG" alt="" />
       </small>
     </header>
   );
