@@ -1,7 +1,7 @@
 export default function Footer(props) {
   return (
     <footer>
-      <h2>
+      <h2 className="winner">
         {props.winner
           ? "Winner Winner Chicken Dinner from the Varna Buffet"
           : "Final results"}

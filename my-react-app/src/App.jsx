@@ -1,29 +1,26 @@
 import Header from "./Header.jsx";
-//import Quiz from "./Quiz.jsx";
 import Footer from "./Footer.jsx";
 import data from "./data.js";
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
-//import nanoid from "nanoid";
 
 export default function App() {
   const [showFinalResults, setShowFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [winner, setWinner] = useState(false);
+  const [wrongMessage, setWrongMessage] = useState("");
 
   function optionsClicked(isCorrect) {
     if (isCorrect) {
+      setWrongMessage("");
       setScore(score + 1);
-    }
-    //then move to the next question
-    //! but if we are at the last item in the array we want to display results
-    if (currentQuestion + 1 < data.length) {
-      //we could have said 10 here but what if we add or remove some questions in the future
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowFinalResults(true);
-    }
+      if (currentQuestion + 1 < data.length) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        setShowFinalResults(true);
+      }
+    } else setWrongMessage("that's not correct, Tom - try again");
   }
   useEffect(() => {
     if (score === 10) {
@@ -32,7 +29,6 @@ export default function App() {
   }, [score]);
 
   function resetQuiz() {
-    //console.log("reset");
     setScore(0);
     setCurrentQuestion(0);
     setShowFinalResults(false);
@@ -53,7 +49,11 @@ export default function App() {
         />
       ) : (
         <div>
-          <div className="current-score">Current score {score}</div>
+          <div className="current-score">
+            Current score {score}
+            <br></br>
+            <p className="wrong-message">{wrongMessage}</p>
+          </div>
           <div className="question-1-of">
             Question {currentQuestion + 1} of {data.length}
           </div>

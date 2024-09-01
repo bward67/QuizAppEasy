@@ -34,10 +34,10 @@ export default [
     id: 4,
     question: "Who won The OPEN 2018?",
     options: [
-      { id: 1, text: "Brooks Koepka", isCorrect: false },
+      { id: 1, text: "Tom Ward", isCorrect: false },
       { id: 2, text: "Jordan Spieth", isCorrect: false },
       { id: 3, text: "Francesco Molinari", isCorrect: true },
-      { id: 4, text: "Tom Ward", isCorrect: false },
+      { id: 4, text: "Brooks Koepka", isCorrect: false },
     ],
   },
   {

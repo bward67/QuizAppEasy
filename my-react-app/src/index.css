@@ -61,11 +61,23 @@ button {
 .current-score {
   background-color: rgb(197, 170, 222);
   color: blueviolet;
-  padding-block: 0.3rem;
+  padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: bold;
+}
+.wrong-message {
+  color: red;
+  font-size: 1.5rem;
+  /*position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 0.7rem;*/
+  border-radius: 0.5rem;
+  text-shadow: 2px 2px 8px #fff;
 }
 .question-1-of {
   color: rgb(197, 170, 222);
@@ -121,4 +133,41 @@ footer {
 .score {
   color: #fff;
   margin-block: 1rem;
+}
+
+@media (min-width: 568px) {
+  .header {
+    font-size: 2.5rem;
+  }
+  .name {
+    font-size: 2rem !important;
+  }
+  small {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+  .answers {
+    font-size: 1.5rem;
+    width: 30%;
+  }
+  .current-score {
+    font-size: 1.5rem;
+  }
+  .winner {
+    font-size: 5rem;
+  }
+  .play-again {
+    font-size: 2.5rem;
+  }
+  .wrong-message {
+    font-size: 4rem;
+  }
+  .question-1-of {
+    font-size: 1.2rem;
+  }
 }
