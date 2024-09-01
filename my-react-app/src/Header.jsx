@@ -1,0 +1,12 @@
+export default function Header() {
+  return (
+    <header className="header">
+      Golf Majors Quiz created especially for
+      <p className="name">Tom Ward</p>
+      <small>
+        made with love from Barbara{" "}
+        <img src="./images/tomandbarbara.JPG" alt="" />
+      </small>
+    </header>
+  );
+}
